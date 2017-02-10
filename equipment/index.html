@@ -1,0 +1,234 @@
+<html>
+<head>
+    <title>Stock</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/uikit.min.css" />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/uikit.min.js"></script>
+    <style>
+section {
+margin-top: 30px;
+}
+
+section h2 {
+width: 100%;
+border-bottom: thin solid black;
+margin: 0;
+}
+
+section #last {
+width: 45%;
+min-height: 300px;
+float: left;
+margin-left: 3%;
+}
+
+section #test, #testing, #failure {
+width: 45%;
+background-color: burlywood;
+float: right;
+margin-right: 3%;
+min-height: 100px;
+margin-top: 2%;
+}
+
+section #test {
+margin-top: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="uk-container uk-margin-bottom">
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+            <div class="uk-navbar-left">
+
+                <a class="uk-navbar-item uk-logo" href="/homepage.html">Gissmo</a>
+
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="/station/index.html">
+                            <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: social"></span>
+                            Station
+                        </a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li>
+                                    <a href="/station/list.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: list"></span>
+                                        List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/station/new.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: plus"></span>
+                                        New
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/station/search.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: search"></span>
+                                        Search
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/equipment/index.html">
+                            <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: cart"></span>
+                            Equipment
+                        </a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li>
+                                    <a href="/equipment/list.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: list"></span>
+                                        List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/equipment/new.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: plus"></span>
+                                        New
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/equipment/search.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: search"></span>
+                                        Search
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/intervention/index.html">
+                            <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: clock"></span>
+                            Intervention
+                        </a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li>
+                                    <a href="/intervention/list.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: list"></span>
+                                        List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/intervention/new.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: plus"></span>
+                                        New
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/intervention/search.html">
+                                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: search"></span>
+                                        Search
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li><a href="#">
+                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: settings"></span>
+                        Preferences</a>
+                    </li>
+                    <li><a href="/index.html">
+                        <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: sign-out"></span>
+                        Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="uk-container">
+        <ul class="uk-subnav uk-subnav-pill" uk-margin>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+        <h1 class="uk-heading-line uk-text-center"><span>Equipment</span></h1>
+
+        <div class="uk-container">
+            <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">At EOST (current user's organism)</h3>
+                        <table class="uk-table uk-table-hover uk-table-striped uk-table-condensed">
+                            <caption>List of equipments grouped by type, model, state</caption>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Model</th>
+                                    <th>State</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>Model</td>
+                                    <td>State</td>
+                                    <td>Quantity</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Datalogger</td>
+                                    <td>Centaur</td>
+                                    <td>Running</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Datalogger</td>
+                                    <td>Centaur</td>
+                                    <td>Failure</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Datalogger</td>
+                                    <td>STS-2</td>
+                                    <td>Running</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="uk-child-width-1-1@s uk-grid-match" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-primary uk-card-body">
+                            <h3 class="uk-card-title">To be tested</h3>
+                            <p>Last 10 equipments to test</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="uk-card uk-card-secondary uk-card-body">
+                            <h3 class="uk-card-title">Testing</h3>
+                            <p>Last 10 current equipments that are in test</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="uk-card uk-card-secondary uk-card-body">
+                            <h3 class="uk-card-title">Failure</h3>
+                            <p>Last 10 equipments that are in failure state</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
